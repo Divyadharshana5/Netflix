@@ -123,3 +123,89 @@ topRatedMovies.forEach((movie) => {
   `;
   topRatedGrid.appendChild(card);
 });
+
+// New Releases movies
+const newReleases = [
+  {
+    title: "The Mother",
+    image: "https://image.tmdb.org/t/p/w500/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg",
+  },
+  {
+    title: "Glass Onion",
+    image: "https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg",
+  },
+  {
+    title: "The Adam Project",
+    image: "https://image.tmdb.org/t/p/w500/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg",
+  },
+  {
+    title: "The Sea Beast",
+    image: "https://image.tmdb.org/t/p/w500/9pCoqX24a6rE981fB1xL6yW5yyO.jpg",
+  },
+  {
+    title: "Day Shift",
+    image: "https://image.tmdb.org/t/p/w500/bI7lGR5HuYlENlp11brKUAaPHuO.jpg",
+  },
+  {
+    title: "Slumberland",
+    image: "https://image.tmdb.org/t/p/w500/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg",
+  },
+];
+const newReleasesGrid = document.getElementById("newReleasesGrid");
+newReleases.forEach((movie) => {
+  const card = document.createElement("div");
+  card.className = "movie-card";
+  card.innerHTML = `
+    <img src="${movie.image}" alt="${movie.title}">
+    <div class="movie-title">${movie.title}</div>
+  `;
+  newReleasesGrid.appendChild(card);
+});
+
+// Comedy movies
+const comedyMovies = [
+  {
+    title: "Murder Mystery",
+    image: "https://image.tmdb.org/t/p/w500/bSMSO9xupd4R4vwTPqigHn2quLN.jpg",
+  },
+  {
+    title: "The Wrong Missy",
+    image: "https://image.tmdb.org/t/p/w500/1eTgP1gF3h6Z6yD6y7k1l7lA4hA.jpg",
+  },
+  {
+    title: "Yes Day",
+    image: "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+  },
+  {
+    title: "The Do-Over",
+    image: "https://image.tmdb.org/t/p/w500/2lECpi35Hnbpa4y46JX0aY3AWTy.jpg",
+  },
+  {
+    title: "The Ridiculous 6",
+    image: "https://image.tmdb.org/t/p/w500/5bKQp0L2r4uBnhbAaqiFzXy9S4H.jpg",
+  },
+  {
+    title: "Game Over, Man!",
+    image: "https://image.tmdb.org/t/p/w500/4PiiNGXj1KENTmCBHeN6Mskj2Fq.jpg",
+  },
+];
+const comedyGrid = document.getElementById("comedyGrid");
+comedyMovies.forEach((movie) => {
+  const card = document.createElement("div");
+  card.className = "movie-card";
+  card.innerHTML = `
+    <img src="${movie.image}" alt="${movie.title}">
+    <div class="movie-title">${movie.title}</div>
+  `;
+  comedyGrid.appendChild(card);
+});
+
+// Newsletter form submission
+const newsletterForm = document.querySelector(".newsletter-form");
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for subscribing!");
+    newsletterForm.reset();
+  });
+}

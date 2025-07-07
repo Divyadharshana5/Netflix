@@ -183,6 +183,80 @@ footer {
   font-size: 1rem;
 }
 
+/* Newsletter Section */
+.newsletter-section {
+  background: #181818;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+}
+.newsletter-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.newsletter-form input[type="email"] {
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  width: 60%;
+  max-width: 250px;
+}
+.newsletter-form button {
+  padding: 0.7rem 1.2rem;
+}
+@media (max-width: 600px) {
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .newsletter-form input[type="email"] {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Social Media Icons */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.social-icons a:hover {
+  color: #e50914;
+}
+.icon-facebook::before {
+  content: "\f09a";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.icon-twitter::before {
+  content: "\f099";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.icon-instagram::before {
+  content: "\f16d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+/* Font Awesome CDN for icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
 /* Responsive Styles */
 @media (max-width: 900px) {
   .hero-content h1 {
