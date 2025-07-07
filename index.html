@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">NETFLIX</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">My List</a></li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Unlimited movies, TV shows, and more</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <button class="cta-btn">Get Started</button>
+      </div>
+    </header>
+    <!-- Featured Banner -->
+    <section class="featured-banner">
+      <img
+        src="https://image.tmdb.org/t/p/original/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+        alt="Featured Movie"
+        class="featured-img"
+      />
+      <div class="featured-info">
+        <h2>Featured: Inception</h2>
+        <p>
+          A thief who steals corporate secrets through the use of dream-sharing
+          technology is given the inverse task of planting an idea into the mind
+          of a CEO.
+        </p>
+        <button class="cta-btn">Play</button>
+      </div>
+    </section>
+    <main>
+      <section class="movie-section">
+        <h2>Popular on Netflix</h2>
+        <div class="movie-grid" id="movieGrid">
+          <!-- Movie cards will be injected here by JS -->
+        </div>
+      </section>
+      <section class="movie-section">
+        <h2>Trending Now</h2>
+        <div class="movie-grid" id="trendingGrid"></div>
+      </section>
+      <section class="movie-section">
+        <h2>Top Rated</h2>
+        <div class="movie-grid" id="topRatedGrid"></div>
+      </section>
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>What is Netflix?</h3>
+            <p>
+              Netflix is a streaming service that offers a wide variety of
+              award-winning TV shows, movies, anime, documentaries, and more on
+              thousands of internet-connected devices.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How much does Netflix cost?</h3>
+            <p>
+              Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+              streaming device, all for one fixed monthly fee. Plans range from
+              $8.99 to $17.99 a month. No extra costs, no contracts.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Where can I watch?</h3>
+            <p>
+              Watch anywhere, anytime, on an unlimited number of devices. Sign
+              in with your Netflix account to watch instantly on the web at
+              netflix.com from your personal computer or on any
+              internet-connected device.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Netflix Clone. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

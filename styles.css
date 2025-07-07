@@ -1,0 +1,227 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #141414;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(20, 20, 20, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e50914;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #e50914;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/6b7e7e2c-2e2e-4e2e-8e2e-2e2e2e2e2e2e/6b7e7e2c-2e2e-4e2e-8e2e-2e2e2e2e2e2e_BG.jpg")
+      center/cover no-repeat;
+  color: #fff;
+  padding: 6rem 2rem 4rem 2rem;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: #b0060f;
+}
+
+/* Movie Grid */
+.movie-section {
+  padding: 2rem;
+}
+.movie-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+.movie-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.movie-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+.movie-card .movie-title {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #181818;
+}
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(229, 9, 20, 0.3);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: #181818;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+/* Featured Banner */
+.featured-banner {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.featured-img {
+  width: 45%;
+  min-width: 180px;
+  object-fit: cover;
+  height: 260px;
+}
+.featured-info {
+  padding: 2rem;
+  flex: 1;
+}
+.featured-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.featured-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: #222;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  max-width: 900px;
+}
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq-item h3 {
+  color: #e50914;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.faq-item p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .movie-section {
+    padding: 1rem;
+  }
+  .featured-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .featured-img {
+    width: 100%;
+    height: 180px;
+  }
+  .featured-info {
+    padding: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+  .movie-grid {
+    gap: 1rem;
+  }
+  .movie-section h2 {
+    font-size: 1.1rem;
+  }
+  .faq-section {
+    padding: 1rem 0.5rem;
+  }
+}
