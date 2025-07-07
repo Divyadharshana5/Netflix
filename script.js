@@ -209,3 +209,11 @@ if (newsletterForm) {
     newsletterForm.reset();
   });
 }
+
+// Redirect Get Started button to signup.html
+const heroBtn = document.querySelector(".hero .cta-btn");
+if (heroBtn) {
+  heroBtn.addEventListener("click", function () {
+    window.location.href = "signup.html";
+  });
+}
